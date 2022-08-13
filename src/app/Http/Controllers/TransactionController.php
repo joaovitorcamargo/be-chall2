@@ -44,7 +44,7 @@ class TransactionController extends Controller
     }
 
     return response()->json([
-      'message' => 'Successfully registered sale',
+      'message' => 'Successfully registered transaction',
     ], 200);
   }
 

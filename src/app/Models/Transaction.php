@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Transaction extends Model
 {
@@ -24,6 +25,6 @@ class Transaction extends Model
     */
     public function saveSale(array $attributes)
     {
-        return $this->create($attributes);
+        return DB::insert('insert into transactions (transactionId, productId, userId, price, date) values (?, ?, ?, ?, ?)', [$attributes['transactionId'], $attributes['productId'], $attributes['userId'], $attributes['price'], $attributes['date']]);
     }
 }
