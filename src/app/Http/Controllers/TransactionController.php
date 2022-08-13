@@ -45,6 +45,9 @@ class TransactionController extends Controller
 
     return response()->json([
       'message' => 'Successfully registered transaction',
+      'data'=> [
+        'transactionId' => $this->transaction->getTransactionId($payload['transactionId'])
+      ]
     ], 200);
   }
 
