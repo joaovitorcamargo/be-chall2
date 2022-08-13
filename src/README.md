@@ -1,24 +1,20 @@
-# Lumen PHP Framework
+# Instalação
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+- Rode o comando docker-compose up -d ou docker-compose up (Escolha de sua preferencia)
+- Rode o comando composer install.
+- Copie o arquivo .env.example e o renomeie para .env
+- Configure o seu .env para estabelecer com suas respectivas conexões.
+- A api fast forex necessita de uma key para funcionar, key essa também especificada no arquivo .env.example
+- Para a execução do sqlite, vá ao seguinte caminho src/database/ e dentro da pasta database crie um arquivo chamado sqlite.db, para funcionar aqui no meu ambiente precisei remover o DB_DATABASE do .env
+- Caso exista um erro de permissão a pasta logs, no seu terminal se vc estiver na root do projeto, digite cd src (para acessar a pasta src via terminal) e rode o seguinte comando sudo chmod -R 777 ./storage/logs caso a pasta storage/logs não exista crie elas manualmente.
+- Rode o comando php artisan migrate (para criar as respectivas tabelas no seu sqlite).
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+# Documentação
+- https://documenter.getpostman.com/view/10580830/VUjSFj7n
 
-## Official Documentation
+# Observação
+- O arquivo composer.lock, decidi inseri-lo no versionamento para que não haja conflito de versões entre ambientes
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Informações Adicionais
+- Fast Forex Api = https://www.fastforex.io/
+- MakeUp Api = http://makeup-api.herokuapp.com/
