@@ -20,5 +20,7 @@ $router->group(['prefix' => 'healthz'], function () use ($router) {
 });
 
 $router->group(['prefix' => 'product'], function () use ($router) {
-    $router->get('/search/{type}/{category}', 'ProductController@search');
+    $router->get('/search/{type}/{category}', 'ProductController@searchProducts');
+    $router->get('/brands/{brand}', 'ProductController@searchProductByBrand');
+    $router->post('/save-transaction', 'TransactionController@saveSale');
 });
