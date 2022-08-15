@@ -78,8 +78,8 @@ class ProductController extends Controller
 
             $products = $this->sendRequest('GET', $payload);
         }catch(Exception $e) {
-            return response()->json([
-                'message' => $e->getMessage()
+            return collect([
+                'error' => $e->getMessage()
             ]);
         }
 
